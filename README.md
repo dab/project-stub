@@ -1,6 +1,6 @@
 # Minimal setup to start a new [BEM](https://bem.info) project
 
-<div><img src="https://mc.yandex.ru/watch/27701205" style="position:absolute; left:-9999px;" alt="" /></div>
+![](https://mc.yandex.ru/watch/27701205)
 
 This repository contains the *minimal* configuration-files and folders you will need to create a [BEM](http://bem.info) project from *scratch*.
 
