@@ -1,6 +1,6 @@
 # Minimal setup to start a new [BEM](https://bem.info) project
 
-!["Yandex.Metrika counter"](http://mc.yandex.ru/watch/27701205) 
+<div><img src="//mc.yandex.ru/watch/27701205" style="position:absolute; left:-9999px;" alt="" /></div>
 
 This repository contains the *minimal* configuration-files and folders you will need to create a [BEM](http://bem.info) project from *scratch*.
 
