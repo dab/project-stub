@@ -1,91 +1,104 @@
-# Stub to start a new [BEM](https://bem.info) project
+# Minimal setup to start a new [BEM](http://bem.info) project
+!["Yandex.Metrika counter"](https://mc.yandex.ru/watch/27701205) 
 
-Project-stub is a template project repository used for BEM projects creation. It contains the minimal configuration files and folders you will need for quick start from scratch. 
+This repository contains the *minimal* configuration-files and folders you will need to create a [BEM](http://bem.info) project from *scratch*.
 
-There are two main BEM libraries are linked here by default:
+---
 
-* [bem-core](https://github.com/bem/bem-core)  
-* [bem-components](https://github.com/bem/bem-components)
+## Installation Requirements:
 
-Just try and taste BEM!
+- [node.js](http://nodejs.org/)
 
-## Installation requirements
+You may also consider [installing bem-tools locally to your environment](http://bem.info/tools/bem/installation/) for [ease of use](#an-easier-more-beautiful-way), though it is **not required**
 
-- [Node.js](http://nodejs.org) is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications.
+---
 
-## Installation
+## Installation:
 
 So, how easy is it to get started with BEM?  *Super easy*.
 
 It's as easy as...
 
-    git clone https://github.com/bem/project-stub.git -b bem-core my-bem-project
-    cd my-bem-project
-    npm install
+1. ›`git clone git://github.com/bem/project-stub.git`
+2. ›`cd project-stub`
+3. ›`npm i`
+4. ›`./node_modules/.bin/bem server`
 
-## Usage
+*(hint: execute the above commands in your terminal)*
 
-Now you can run any bem-tools commands from a `./node_modules/bem/bin/bem` directory.
-To be able to run bem-tools commands without typing a full path to an executable file (node_modules/bem/bin/bem), use bem-cli npm package: 
+Now that `bem server` is running, check it out:
 
-`npm install -g bem-cli` or use an alternative method `export PATH=./node_modules/.bin:$PATH`
+````
+Navigate to: http://localhost:8080/desktop.bundles/index/index.html
+````
 
-**Start the server:**
+(here, have a link: [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html))
 
-```bash
-bem server # bem server -p 8080 -v info|silly|debug|verbose|warn|error
-```
+---
 
-> **hint:** execute the above commands in your terminal
+**That's it, it's that simple. Congratulations, your BEM project is already underway!**
 
-Now that `bem server ` is running, check it out:
+---
 
-    navigate to: http://localhost:8080/desktop.bundles/index/index.html
+### Was that too easy?
 
-Stopping the server is also easy, pressing `Ctrl` + `C` while the terminal is your active window will stop the server.
+Here's the replay... that `npm i` command will:
 
-**Add block:**
+1. Install a **local copy** of all required dependencies from [npm](http://npmjs.org/) into the `./node_modules` directory. (specifically: [bem-tools](http://github.com/bem/bem-tools))
+2. Install `bower` dependencies.
 
-    bem create -l desktop.blocks -b newBlock
+#### Note:
 
-**Add page:**
+What do we mean by "a **local copy** of all required dependencies"?
 
-    bem create -l desktop.bundles -b page
+Well, when you run the `npm i` command, we install all of the required dependencies ([bem-tools](http://github.com/bem/bem-tools))
+to the `./node_modules` directory within the **local project directory**.  This is *not* the same thing as
+[installing bem-tools locally to your environment](http://bem.info/tools/bem/installation/).  This is by far the easiest, quickest way to use
+[bem-tools](http://github.com/bem/bem-tools) in [a more beautiful way](#an-easier-more-beautiful-way).
 
->  **hint:** you can add aliases for super easy use
+---
 
-<pre><code class="lasso">echo "alias 'bemblock'='bem create -l desktop.blocks -b'" >> ~/.bashrc
-echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
-</code></pre>
+## Usage:
 
-## Generator of BEM projects for Yeoman
+### Start the Server:
 
-This generator provides you the ability to get the base of BEM project in few minutes by answering the simple questions.
-- [generator-bem-stub](https://en.bem.info/tools/bem/bem-stub/)
+    › ./node_modules/.bin/bem server
 
-## Docs
+This is the ugly way to run the `bem server` command.  If you think it's ugly too and wish for [a better way](#an-easier-more-beautiful-way) keep reading...
 
-- [Full stack quick start](https://en.bem.info/articles/start-with-project-stub/)
-- [Tutorial for BEMJSON template-engine](https://en.bem.info/technology/bemjson/current/bemjson/)
-- [Tutorial on BEMHTML](https://en.bem.info/libs/bem-core/2.0.0/bemhtml/reference/)
-- [Tutorial on i-bem.js](https://en.bem.info/tutorials/bem-js-tutorial/)
-- [JavaScript for BEM: main terms](https://en.bem.info/articles/bem-js-main-terms/)
-- [Commands bem-tools](https://en.bem.info/tools/bem/bem-tools/commands/)
+### An Easier, More Beautiful Way:
 
-## Project-stub based projects
+Once you have either (a) [fixed your PATH environment variable](#fix-your-path-environment-variable), or (b)
+[properly installed bem-tools to your local environment](http://bem.info/tools/bem/installation/).
+You may now, more elegantly, start your `bem server` by running:
 
-- [Creating BEM application on Leaflet and 2GIS API](https://en.bem.info/tutorials/firm-card-story/)
-- [Creating a menu of geo objects collections with Yandex.Maps API and BEM](https://en.bem.info/tutorials/yamapsbem/)
-- [SSSR (Social Services Search Robot)](https://github.com/bem/sssr) — study app with BEM full-stack
+    › bem server
 
-## Useful tools
+---
 
-- [bem-cli](https://en.bem.info/blog/bem-cli/) — run bem-tools locally
-- [borschik](https://en.bem.info/tools/optimizers/borschik/) — borschik is a simple but powerful builder for text-based file formats
+### Stopping the Server:
 
-## Videos
-- [BEM for JavaScript Talk on Camp JS](https://en.bem.info/talks/campjs-melbourne-2014/)
+Stopping the server is also easy:
 
-## Working under Windows environment
+    [ctrl] + [c]
 
-- [bemup-workshop-vagrant](https://github.com/dab/bemup-workshop-vagrant/blob/master/README.ru.md) — Provisions a clean VirtualBox Ubuntu server instance with all needed Node.js development tools 
+Pressing `[ctrl] + [c]` while the terminal is your active window will stop the server.
+
+---
+
+### Fix your PATH environment variable:
+
+For a more permanent way to "easily" use the *local-to-this-project's* installation of
+[bem-tools](http://github.com/bem/bem-tools) all you must do is ensure that the **path** to the `bem` executable
+(`./node_modules/.bin`) is included in your `PATH` environment variable.
+
+    > export PATH=./node_modules/.bin:$PATH
+
+Optionally you may also add `export PATH=PATH_TO_PROJECT_DIRECTORY/node_modules/.bin:$PATH` to your `.profile`
+(obviously replacing `PATH_TO_PROJECT_DIRECTORY` with the actual path to your project)
+
+---
+
+[BEM](http://bem.info) is an abbreviation for Block-Element-Modifier.  [BEM](http://bem.info) is a way to write code which is easy to support and develop.
+
+For more information about the BEM metodology check out [http://bem.info](http://bem.info/).
