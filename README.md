@@ -1,4 +1,5 @@
 # Minimal setup to start a new [BEM](http://bem.info) project
+
 !["Yandex.Metrika counter"](https://mc.yandex.ru/watch/27701205) 
 
 This repository contains the *minimal* configuration-files and folders you will need to create a [BEM](http://bem.info) project from *scratch*.
